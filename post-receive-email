@@ -678,8 +678,8 @@ announcerecipients=$(git config hooks.announcelist)
 envelopesender=$(git config hooks.envelopesender)
 emailprefix=$(git config hooks.emailprefix || echo '[SCM] ')
 custom_showrev=$(git config hooks.showrev)
-email_from_address=$(git log -1 --format=format:%ae HEAD)
-latest_commit_message=$(git log -1 --format=format:%s HEAD)
+email_from_address=$(git log -1 --pretty=format:%ae HEAD)
+latest_commit_message=$(git log -1 --pretty=format:%s HEAD)
 
 # --- Main loop
 # Allow dual mode: run from the command line just like the update hook, or
